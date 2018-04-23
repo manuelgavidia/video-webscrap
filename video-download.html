@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
+<head>
+<script src="video-download.js"></script>
+</head>
 <body>
 
 <h2>Download Video</h2>
 
-<input type="url" name="site" oninput='change(this)'> &nbsp
+<input type="url" name="site" oninput='change(this, "demo")'> &nbsp
 <a id="demo"></a> <br>
-
- <script>
-   function myFunction(val) {
-     return val + "hexa";
-   }
-
-   function change(input) {
-     if (input.checkValidity() && input.value.length > 0) {
-       document.getElementById("demo").href= myFunction(input.value);
-       document.getElementById("demo").innerHTML="Download";
-     } else {
-       document.getElementById("demo").href=null;
-       document.getElementById("demo").innerHTML=null;
-     }
-   }
-</script>
-
 
 </body>
 </html>
