@@ -1,18 +1,29 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 <body>
 
-<h2>What Can JavaScript Do?</h2>
+<h2>Download Video</h2>
 
-<p>JavaScript can change HTML attributes.</p>
+<input type="url" name="site" oninput='change(this)'> &nbsp
+<a id="demo"></a> <br>
 
-<p>In this case JavaScript changes the src (source) attribute of an image.</p>
+ <script>
+   function myFunction(val) {
+     return val + "hexa";
+   }
 
-<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+   function change(input) {
+     if (input.checkValidity() && input.value.length > 0) {
+       document.getElementById("demo").href= myFunction(input.value);
+       document.getElementById("demo").innerHTML="Download";
+     } else {
+       document.getElementById("demo").href=null;
+       document.getElementById("demo").innerHTML=null;
+     }
+   }
+</script>
 
-<img id="myImage" src="pic_bulboff.gif" style="width:100px">
-
-<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
 
 </body>
 </html>
